@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700;1,800&display=swap');
+
+:root {
+
+    --orange-color: #F2994A;
+    --light-gray: #BDBDBD;
+    --darker-gray: #4F4F4F;
+
+    --mont: 'Montserrat', sans-serif;
+    --playfair: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 67%;
+    margin: 50px auto;
+    overflow-x: hidden;
+}
+
+
+/* - - - - ------ HEADER  -------------- */
+
+.header-title {
+    font-size: 48px;
+    font-family: var(--playfair);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.header-description-container {
+    display: flex;
+    gap: 20px 12px;
+    width: 53%;
+}
+
+.header-description {
+    color: var(--darker-gray);
+    font-family: var(--mont);
+    font-size: 14px;
+}
+
+.header-description .title-icon {
+    color: var(--light-gray);
+    font-size: 13px;
+}
+
+
+
+
+/*------------- MAIN ------------------ */
+
+.image-container .image-img {
+    width: 100%;
+    margin: 3.5% auto;
+}
+
+
+
+
+/*--------- main container: recipe container ----------- */
+.recipe-container {
+    display: flex;
+    gap: 15%;
+}
+
+
+
+.information-container {
+
+    width: 58%;
+
+}
+
+/*.-.-.-.-.-.-.- INGREDIENTS .--.-.-.-.-.*/
+/*ingredients-section*/
+.information-title {
+    font-size: 24px;
+    font-family: var(--playfair);
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #333;
+}
+
+
+.ingredients-subtitle {
+    color: #333;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.ingredients-list {
+    color: #333;
+    font-family: var(--mont);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 32px auto;
+    width: 100%;
+
+}
+
+.ingredients-list label {
+
+    line-height: 25px;
+    margin-bottom: 10px;
+
+}
+
+.check-ingredient {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.ingredients-list .check-ingredient {
+    margin-bottom: 10px;
+    display: flex;
+    align-content: flex-start;
+    color: #333;
+
+}
+
+
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 17px;
+}
+
+/* Estilo del checkbox marcado */
+input[type="checkbox"]:checked {
+    background-color: #333;
+
+}
+
+input[type="checkbox"]:checked+label {
+    text-decoration: line-through;
+    text-decoration-style: solid;
+    text-decoration-color: var(--darker-gray);
+    /* Opcional: ajusta la anchura de la línea */
+    text-decoration-thickness: 1.5px;
+    color: var(--light-gray)
+}
+
+/* Estilo del indicador del checkbox */
+input[type="checkbox"]::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    visibility: hidden;
+}
+
+/* Estilo del indicador del checkbox cuando está marcado */
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+
+
+.ingredients-list label input {
+    margin-right: 10px;
+    width: 21px;
+    height: 21px;
+
+}
+
+
+
+
+/*---------- Instructions container ---------*/
+
+.instructions-list .instruction {
+    line-height: 25px;
+    color: #333;
+    font-family: var(--mont);
+    font-size: 16px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+
+    display: flex;
+}
+
+.text-instruction {
+    margin-left: 10px;
+}
+
+.instructions-list span {
+    background-color: var(--orange-color);
+    color: #fff;
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-family: var(--playfair);
+    font-size: 24px;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+
+
+.instructions-source {
+    color: var(--light-gray);
+    font-family: var(--mont);
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 7%;
+}
+
+
+
+
+
+/*------------------------------*/
+.servings-container {
+
+    width: 216px;
+    height: 367px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.serving {
+    display: flex;
+    margin: 0 20%;
+}
+
+.serving i {
+    color: var(--orange-color);
+    font-size: 34px;
+    margin-right: 10px;
+}
+
+
+.serving-title {
+    color: var(--light-gray);
+    font-size: 10px;
+    font-family: var(--mont);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.serving-description .sd1 {
+    color: #F2994A;
+}
+
+.serving-description {
+    font-family: var(--mont);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+            
+footer {
+    margin: 10% auto 2% auto;
+    display: flex;
+    justify-content: center;
+    color: var(--light-gray);
+    font-family: var(--font-mont);
+  }
+  
+  footer a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+
+/*------------------------- MEDIA QUERIES -------------------------------------*/
+
+@media screen and (max-width: 800px) {
+    body {
+        width: 100%;
+        padding: 0 5%;
+        overflow-x: hidden;
+      
+    }
+    header{
+        width: 100%;
+    }
+
+    .header-description-container {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .header-title{
+        font-size: 24px;
+    }
+    .header-description{
+        font-size: 12px;
+    }
+
+
+
+
+    .information-container{
+        width: 100%;
+        order: 2;
+        height: auto;
+    }
+
+    .recipe-container {
+        width: 100%;
+        display: grid;
+       gap: 30px;
+        margin-bottom: 0;
+       
+    }
+
+    .servings-container {
+        order: 1;
+        width: 100%;
+       height: auto;
+
+        
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+
+    .serving {
+       margin: 0;
+       padding: 0;
+    height: 50px;
+    }
+
+    .serving i{
+        font-size: 17px;
+    }
+    .serving-title{
+        font-size: 8px;
+    }
+    .serving-description{
+        font-size: 10px;
+    }
+
+
+
+    footer{
+        margin: 30% auto 3% auto;
+    }
+    
+}
+
+
+
