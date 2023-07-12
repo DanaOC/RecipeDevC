@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/DanaOC/GalleryDevC.git">
+    <a href="https://github.com/DanaOC/RecipeDevC.git">
       Solution
     </a>
     <span> | </span>
